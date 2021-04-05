@@ -61,74 +61,74 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(121, 86);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(167, 22);
+            this.label1.Size = new System.Drawing.Size(160, 24);
             this.label1.TabIndex = 0;
             this.label1.Text = "Nombre Empresa";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(192, 128);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(96, 22);
+            this.label2.Size = new System.Drawing.Size(90, 24);
             this.label2.TabIndex = 1;
             this.label2.Text = "Dirección";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(201, 170);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(87, 22);
+            this.label3.Size = new System.Drawing.Size(85, 24);
             this.label3.TabIndex = 2;
             this.label3.Text = "Teléfono";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(220, 212);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(68, 22);
+            this.label4.Size = new System.Drawing.Size(64, 24);
             this.label4.TabIndex = 3;
             this.label4.Text = "Sector";
             // 
             // txtNombreE
             // 
-            this.txtNombreE.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombreE.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombreE.Location = new System.Drawing.Point(294, 83);
             this.txtNombreE.Name = "txtNombreE";
-            this.txtNombreE.Size = new System.Drawing.Size(262, 31);
+            this.txtNombreE.Size = new System.Drawing.Size(262, 29);
             this.txtNombreE.TabIndex = 4;
             // 
             // txtDireccion
             // 
-            this.txtDireccion.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDireccion.Location = new System.Drawing.Point(294, 125);
             this.txtDireccion.Name = "txtDireccion";
-            this.txtDireccion.Size = new System.Drawing.Size(262, 31);
+            this.txtDireccion.Size = new System.Drawing.Size(262, 29);
             this.txtDireccion.TabIndex = 5;
             // 
             // txtTelefono
             // 
-            this.txtTelefono.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTelefono.Location = new System.Drawing.Point(294, 167);
             this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(262, 31);
+            this.txtTelefono.Size = new System.Drawing.Size(262, 29);
             this.txtTelefono.TabIndex = 6;
             // 
             // cmbSector
             // 
-            this.cmbSector.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbSector.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbSector.FormattingEnabled = true;
             this.cmbSector.Items.AddRange(new object[] {
             "Alimentos",
@@ -141,7 +141,7 @@
             "Viveres"});
             this.cmbSector.Location = new System.Drawing.Point(294, 209);
             this.cmbSector.Name = "cmbSector";
-            this.cmbSector.Size = new System.Drawing.Size(262, 30);
+            this.cmbSector.Size = new System.Drawing.Size(262, 32);
             this.cmbSector.TabIndex = 7;
             // 
             // btnRegistrar
@@ -150,7 +150,7 @@
             this.btnRegistrar.FlatAppearance.BorderSize = 0;
             this.btnRegistrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
             this.btnRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRegistrar.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegistrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistrar.ForeColor = System.Drawing.Color.White;
             this.btnRegistrar.Location = new System.Drawing.Point(581, 54);
             this.btnRegistrar.Name = "btnRegistrar";
@@ -166,7 +166,7 @@
             this.btnActualizar.FlatAppearance.BorderSize = 0;
             this.btnActualizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
             this.btnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnActualizar.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnActualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnActualizar.ForeColor = System.Drawing.Color.White;
             this.btnActualizar.Location = new System.Drawing.Point(581, 125);
             this.btnActualizar.Name = "btnActualizar";
@@ -182,7 +182,7 @@
             this.btnEliminar.FlatAppearance.BorderSize = 0;
             this.btnEliminar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminar.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.ForeColor = System.Drawing.Color.White;
             this.btnEliminar.Location = new System.Drawing.Point(581, 196);
             this.btnEliminar.Name = "btnEliminar";
@@ -219,7 +219,7 @@
             this.btnBuscar.FlatAppearance.BorderSize = 0;
             this.btnBuscar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscar.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.ForeColor = System.Drawing.Color.White;
             this.btnBuscar.Location = new System.Drawing.Point(581, 267);
             this.btnBuscar.Name = "btnBuscar";
@@ -299,54 +299,55 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(123, 255);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(165, 22);
+            this.label6.Size = new System.Drawing.Size(152, 24);
             this.label6.TabIndex = 18;
             this.label6.Text = "Horario Atención";
             // 
             // txtHorario
             // 
-            this.txtHorario.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtHorario.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtHorario.Location = new System.Drawing.Point(294, 252);
             this.txtHorario.Name = "txtHorario";
-            this.txtHorario.Size = new System.Drawing.Size(262, 31);
+            this.txtHorario.Size = new System.Drawing.Size(262, 29);
             this.txtHorario.TabIndex = 19;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
             this.label7.Location = new System.Drawing.Point(220, 292);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(68, 22);
+            this.label7.Size = new System.Drawing.Size(64, 24);
             this.label7.TabIndex = 20;
             this.label7.Text = "Sector";
             // 
             // rbAbierto
             // 
             this.rbAbierto.AutoSize = true;
-            this.rbAbierto.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbAbierto.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbAbierto.ForeColor = System.Drawing.Color.Lime;
             this.rbAbierto.Location = new System.Drawing.Point(312, 294);
             this.rbAbierto.Name = "rbAbierto";
-            this.rbAbierto.Size = new System.Drawing.Size(96, 26);
+            this.rbAbierto.Size = new System.Drawing.Size(88, 28);
             this.rbAbierto.TabIndex = 21;
             this.rbAbierto.TabStop = true;
             this.rbAbierto.Text = "Abierto";
             this.rbAbierto.UseVisualStyleBackColor = true;
+            
             // 
             // rbCerrado
             // 
             this.rbCerrado.AutoSize = true;
-            this.rbCerrado.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbCerrado.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbCerrado.ForeColor = System.Drawing.Color.Red;
             this.rbCerrado.Location = new System.Drawing.Point(425, 295);
             this.rbCerrado.Name = "rbCerrado";
-            this.rbCerrado.Size = new System.Drawing.Size(105, 26);
+            this.rbCerrado.Size = new System.Drawing.Size(96, 28);
             this.rbCerrado.TabIndex = 22;
             this.rbCerrado.TabStop = true;
             this.rbCerrado.Text = "Cerrado";
