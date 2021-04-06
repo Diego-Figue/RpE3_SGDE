@@ -25,7 +25,7 @@ namespace appE3_SGDE.Vistaa
 
         private void btnIniciar_Click(object sender, EventArgs e)
         {
-            if (txtUsuario.Text=="Administrador" & txtContraseña.Text=="sgde2021" || txtContraseña.Text == "sgde123")
+            if (txtUsuario.Text=="Administrador" & txtContraseña.Text=="sgde2021")
             {
                 this.Hide();
                 frmMenu objMenu = new frmMenu();
@@ -89,17 +89,6 @@ namespace appE3_SGDE.Vistaa
         private void btnMinimizar_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
-        }
-
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            frmRecuperarContraseña objRecuperar = new frmRecuperarContraseña();
-            objRecuperar.Show();
-        }
-
-        private void frmLogin_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
