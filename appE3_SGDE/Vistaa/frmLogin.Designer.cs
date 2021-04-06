@@ -207,6 +207,7 @@ namespace appE3_SGDE.Vistaa
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "¿Ha olvidado su contraseña?";
             this.linkLabel1.VisitedLinkColor = System.Drawing.Color.DimGray;
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // frmLogin
             // 

@@ -21,8 +21,7 @@ namespace appE3_SGDE.Vistaa
             InitializeComponent();
         }
 
-
-        private void btnRestaurar_Click_1(object sender, EventArgs e)
+        private void btnRestaurar_Click(object sender, EventArgs e)
         {
 
             try
@@ -60,11 +59,14 @@ namespace appE3_SGDE.Vistaa
                     {
 
                         MessageBox.Show("!Contraseña enviada correctamente¡", "Envio de correo satisfactorio", MessageBoxButtons.OK);
-
+                        txtUsuario.Text = "";
+                        txtCorreo.Text = "";
                     }
                     else
                     {
                         MessageBox.Show("Correo no encontrado", "Error al restaurar la contraseña", MessageBoxButtons.OK);
+                        txtUsuario.Text = "";
+                        txtCorreo.Text = "";
                     }
 
                     try
@@ -77,8 +79,7 @@ namespace appE3_SGDE.Vistaa
                         Console.Write(ex);
                     }
 
-                    txtCorreo.Text = "";
-                    txtUsuario.Text = "";
+                    
 
 
                 }
@@ -86,20 +87,55 @@ namespace appE3_SGDE.Vistaa
             catch (Exception)
             {
                 MessageBox.Show("Correo no encontrado", "Error al restaurar la contraseña", MessageBoxButtons.OK);
-
+                txtCorreo.Text = "";
+                txtUsuario.Text = "";
             }
-
         }
 
-
-        private void btnVolver_Click(object sender, EventArgs e)
+        private void btnCerrar_Click(object sender, EventArgs e)
         {
-            
             this.Close();
+            frmLogin objLogin = new frmLogin();
+            objLogin.Show();
         }
 
+        private void txtUsuario_Enter(object sender, EventArgs e)
+        {
+            if (txtUsuario.Text == "USUARIO")
+            {
+                txtUsuario.Text = "";
+                txtUsuario.ForeColor = Color.LightGray;
+            }
+        }
 
+        private void txtUsuario_Leave(object sender, EventArgs e)
+        {
+            if (txtUsuario.Text == "")
+            {
+                txtUsuario.Text = "USUARIO";
+                txtUsuario.ForeColor = Color.DimGray;
+            }
+        }
 
+        private void txtCorreo_Enter(object sender, EventArgs e)
+        {
+            if (txtCorreo.Text == "CORREO")
+            {
+                txtCorreo.Text = "";
+                txtCorreo.ForeColor = Color.LightGray;
+               
+            }
+        }
+
+        private void txtCorreo_Leave(object sender, EventArgs e)
+        {
+            if (txtCorreo.Text == "")
+            {
+                txtCorreo.Text = "CORREO";
+                txtCorreo.ForeColor = Color.DimGray;
+             
+            }
+        }
     }
 }
 
