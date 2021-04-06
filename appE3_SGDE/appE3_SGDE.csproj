@@ -84,6 +84,7 @@
     <Compile Include="Datoss\clCliente.cs" />
     <Compile Include="Datoss\clDomicilio.cs" />
     <Compile Include="Datoss\clEmpresa.cs" />
+    <Compile Include="Datoss\clMapa.cs" />
     <Compile Include="Datoss\clProducto.cs" />
     <Compile Include="Datoss\clTarifa.cs" />
     <Compile Include="Program.cs" />

@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,6 +12,8 @@ using GMap.NET;
 using GMap.NET.MapProviders;
 using GMap.NET.WindowsForms;
 using GMap.NET.WindowsForms.Markers;
+using appE3_SGDE.Datoss;
+using appE3_SGDE.Vistaa;
 
 
 namespace appE3_SGDE.Vistaa
@@ -33,19 +36,26 @@ namespace appE3_SGDE.Vistaa
         {
             InitializeComponent();
         }
-
+        public void mtdCargarGrind()
+        {
+            clMapa objMapa = new clMapa();
+            List<clMapa> listMapa = new List<clMapa>();
+            listMapa = objMapa.mtdListarMapa();
+            dgvCooredenadas.DataSource = listMapa;
+        }
         private void frmMapa_Load(object sender, EventArgs e)
         {
-            dt = new DataTable();
-            dt.Columns.Add(new DataColumn("Descripción", typeof(string)));
-            dt.Columns.Add(new DataColumn("Lat", typeof(double)));
-            dt.Columns.Add(new DataColumn("Long", typeof(double)));
+            mtdCargarGrind();
+            //dt = new DataTable();
+            //dt.Columns.Add(new DataColumn("Descripción", typeof(string)));
+            //dt.Columns.Add(new DataColumn("Lat", typeof(double)));
+            //dt.Columns.Add(new DataColumn("Long", typeof(double)));
 
-            dt.Rows.Add("Sogamoso", LatInicial, LngInicial);
-            dgvCooredenadas.DataSource = dt;
+            //dt.Rows.Add("Sogamoso", LatInicial, LngInicial);
+            //dgvCooredenadas.DataSource = dt;
 
-            dgvCooredenadas.Columns[1].Visible = false;
-            dgvCooredenadas.Columns[2].Visible = false;
+            //dgvCooredenadas.Columns[1].Visible = false;
+            //dgvCooredenadas.Columns[2].Visible = false;
 
             gMapControl1.DragButton = MouseButtons.Left;
             gMapControl1.CanDragMap = true;
@@ -74,14 +84,14 @@ namespace appE3_SGDE.Vistaa
 
         private void SeleccionarRegistro(object sender, DataGridViewCellMouseEventArgs e)
         {
-            filasSeleccionada = e.RowIndex;
-            txtDescripcion.Text = dgvCooredenadas.Rows[filasSeleccionada].Cells[0].Value.ToString();
-            txtLatitud.Text = dgvCooredenadas.Rows[filasSeleccionada].Cells[1].Value.ToString();
-            txtLongitud.Text = dgvCooredenadas.Rows[filasSeleccionada].Cells[2].Value.ToString();
+            //filasSeleccionada = e.RowIndex;
+            //txtDescripcion.Text = dgvCooredenadas.Rows[filasSeleccionada].Cells[0].Value.ToString();
+            //txtLatitud.Text = dgvCooredenadas.Rows[filasSeleccionada].Cells[1].Value.ToString();
+            //txtLongitud.Text = dgvCooredenadas.Rows[filasSeleccionada].Cells[2].Value.ToString();
 
-            marker.Position = new PointLatLng(Convert.ToDouble(txtLatitud.Text), Convert.ToDouble(txtLongitud.Text));
+            //marker.Position = new PointLatLng(Convert.ToDouble(txtLatitud.Text), Convert.ToDouble(txtLongitud.Text));
 
-            gMapControl1.Position = marker.Position;
+            //gMapControl1.Position = marker.Position;
 
         }
 
@@ -99,12 +109,42 @@ namespace appE3_SGDE.Vistaa
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            dt.Rows.Add(txtDescripcion.Text, txtLatitud.Text, txtLongitud.Text);
+            //dt.Rows.Add(txtDescripcion.Text, txtLatitud.Text, txtLongitud.Text);
+
+
+            clMapa objMapa = new clMapa();
+            objMapa.descripcion = txtDescripcion.Text;
+
+
+            int cantidadRegistros = objMapa.mtdRegistrarMapa();
+            if (cantidadRegistros > 0)
+            {
+                mtdCargarGrind();
+                MessageBox.Show("Descripcion Agregada", "SGDE", MessageBoxButtons.OK);
+            }
+            else
+            {
+                MessageBox.Show("Error Al Agregar Descripcion", "SGDE", MessageBoxButtons.OK);
+            }
+
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             dgvCooredenadas.Rows.RemoveAt(filasSeleccionada);
+        }
+
+    
+        private void dgvCooredenadas_CellClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            filasSeleccionada = e.RowIndex;
+            txtDescripcion.Text = dgvCooredenadas.Rows[filasSeleccionada].Cells[0].Value.ToString();
+            txtLatitud.Text = dgvCooredenadas.Rows[filasSeleccionada].Cells[1].Value.ToString();
+            txtLongitud.Text = dgvCooredenadas.Rows[filasSeleccionada].Cells[2].Value.ToString();
+
+            marker.Position = new PointLatLng(Convert.ToDouble(txtLatitud.Text), Convert.ToDouble(txtLongitud.Text));
+
+            gMapControl1.Position = marker.Position;
         }
     }
 }
