@@ -62,8 +62,7 @@ namespace appE3_SGDE.Vistaa
 
         private void btnRefrescar_Click_1(object sender, EventArgs e)
         {
-            
-            //chrome.Refresh();
+            chrome.Refresh();
         }
 
         private void btnAdelante_Click_1(object sender, EventArgs e)
