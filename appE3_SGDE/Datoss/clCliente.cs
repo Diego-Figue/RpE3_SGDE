@@ -12,8 +12,8 @@ namespace appE3_SGDE.Datoss
     class clCliente
     {
         public int idCliente { get; set; }
-        public string nombre { get; set; }
-        public string apellido { get; set; }
+        public string nombres { get; set; }
+        public string apellidos { get; set; }
         public string direccion { get; set; }
         public string telefono { get; set; }
         public string email { get; set; }
@@ -33,8 +33,8 @@ namespace appE3_SGDE.Datoss
             {
                 clCliente objPasarProfesion = new clCliente();
                 objPasarProfesion.idCliente = int.Parse(tblClientes.Rows[i]["idCliente"].ToString());
-                objPasarProfesion.nombre = tblClientes.Rows[i]["nombre"].ToString();
-                objPasarProfesion.apellido = tblClientes.Rows[i]["apellido"].ToString();
+                objPasarProfesion.nombres = tblClientes.Rows[i]["nombres"].ToString();
+                objPasarProfesion.apellidos = tblClientes.Rows[i]["apellidos"].ToString();
                 objPasarProfesion.direccion = tblClientes.Rows[i]["direccion"].ToString();
                 objPasarProfesion.telefono = tblClientes.Rows[i]["telefono"].ToString();
                 objPasarProfesion.email = tblClientes.Rows[i]["email"].ToString();
@@ -49,7 +49,7 @@ namespace appE3_SGDE.Datoss
         public int mtdRegistrar()
         {
             string consultaInsert = "insert into cliente(nombre,apellido,direccion,telefono,email,nombreEmpresa)values" +
-                "('" + nombre + "','" + apellido + "','" + direccion + "','" + telefono + "','" + email + "','" + nombreEmpresa + "')";
+                "('" + nombres + "','" + apellidos + "','" + direccion + "','" + telefono + "','" + email + "','" + nombreEmpresa + "')";
             clConexion objConexion = new clConexion();
             int registrosAfectados = objConexion.mtdConectado(consultaInsert);
             return registrosAfectados;

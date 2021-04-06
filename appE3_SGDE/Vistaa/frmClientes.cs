@@ -38,8 +38,8 @@ namespace appE3_SGDE.Vistaa
         {
 
             clCliente objCliente = new clCliente();
-            objCliente.nombre = txtNombre.Text;
-            objCliente.apellido = txtApellido.Text;
+            objCliente.nombres = txtNombre.Text;
+            objCliente.apellidos = txtApellido.Text;
             objCliente.direccion = txtDireccion.Text;
             objCliente.telefono = txtTelefono.Text;
             objCliente.email = txtEmail.Text;

@@ -22,12 +22,6 @@ namespace appE3_SGDE.Vistaa
     {
         GMarkerGoogle marker;
         GMapOverlay markOverlay;
-        DataTable dt;
-
-        bool trazarRuta = false;
-        int contadorIndicadorRuta = 0;
-        PointLatLng inicio;
-        PointLatLng final;
 
         int filasSeleccionada = 0;
         double LatInicial = 5.717;
