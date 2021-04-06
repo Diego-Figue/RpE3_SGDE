@@ -163,6 +163,9 @@ namespace appE3_SGDE.Vistaa
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmPedidos";
             this.Text = "frmPedidos";
+            this.Deactivate += new System.EventHandler(this.frmPedidos_Deactivate);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmPedidos_FormClosing_1);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmPedidos_FormClosed);
             this.Load += new System.EventHandler(this.frmPedidos_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

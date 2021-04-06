@@ -83,6 +83,7 @@ namespace appE3_SGDE.Vistaa
 
         private void btnCostos_Click(object sender, EventArgs e)
         {
+           
             mtdAbrirFormHijo(new frmTarifa());
         }
 

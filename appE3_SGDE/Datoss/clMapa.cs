@@ -48,6 +48,16 @@ namespace appE3_SGDE.Datoss
             clConexion objConexion = new clConexion();
             int Datos = objConexion.mtdConectado(consulta);
             return Datos;
-        }     
+        }
+    
+        public int mtdEliminar()
+        {
+
+            string consulta = "delete from mapa where idMapa = " + idMapa;
+            clConexion objConexion = new clConexion();
+            int eliminar = objConexion.mtdConectado(consulta);
+            return eliminar;
+
+        }
     }
 }

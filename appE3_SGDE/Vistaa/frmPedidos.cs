@@ -24,13 +24,22 @@ namespace appE3_SGDE.Vistaa
         {
             CefSettings settings = new CefSettings();
             //initializa
-            Cef.Initialize(settings);
+            if (!Cef.IsInitialized)
+            {
+                Cef.Initialize(settings);
+            }
+     
             txtDireccionUrl.Text = "https://web.whatsapp.com";
             chrome = new ChromiumWebBrowser(txtDireccionUrl.Text);
             this.panelNavegador.Controls.Add(chrome);
             chrome.Dock = DockStyle.Fill;
             chrome.AddressChanged += Chrome_AddressChange;
 
+
+        }
+        public void mtdDesactivar()
+        {
+            Cef.Shutdown();
         }
 
         private void Chrome_AddressChange(object sender, AddressChangedEventArgs e)
@@ -53,7 +62,8 @@ namespace appE3_SGDE.Vistaa
 
         private void btnRefrescar_Click_1(object sender, EventArgs e)
         {
-            chrome.Refresh();
+            
+            //chrome.Refresh();
         }
 
         private void btnAdelante_Click_1(object sender, EventArgs e)
@@ -66,6 +76,21 @@ namespace appE3_SGDE.Vistaa
         {
             if (chrome.CanGoBack)
                 chrome.Back();
+        }
+
+        private void frmPedidos_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Cef.Shutdown();
+        }
+
+        private void frmPedidos_FormClosing_1(object sender, FormClosingEventArgs e)
+        {
+            Cef.Shutdown();
+        }
+
+        private void frmPedidos_Deactivate(object sender, EventArgs e)
+        {
+            Cef.Shutdown();
         }
     }
 }

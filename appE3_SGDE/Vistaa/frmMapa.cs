@@ -108,6 +108,8 @@ namespace appE3_SGDE.Vistaa
 
             clMapa objMapa = new clMapa();
             objMapa.descripcion = txtDescripcion.Text;
+            objMapa.latitud = double.Parse(txtLatitud.Text);
+            objMapa.longitud = double.Parse(txtLongitud.Text);
 
 
             int cantidadRegistros = objMapa.mtdRegistrarMapa();
@@ -122,19 +124,32 @@ namespace appE3_SGDE.Vistaa
             }
 
         }
-
+        clMapa objMapa;
+        int idMapaBorar = 0;
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            dgvCooredenadas.Rows.RemoveAt(filasSeleccionada);
+            objMapa = new clMapa();
+            objMapa.idMapa = idMapaBorar;
+
+            if (objMapa.mtdEliminar() > 0)
+            {
+                MessageBox.Show("Descripcción Eliminada");
+                //mtdCargar();
+
+            }
+            else
+            {
+                MessageBox.Show("Error, no se pudo eliminar la descripcción");
+            }
         }
 
     
         private void dgvCooredenadas_CellClick_1(object sender, DataGridViewCellEventArgs e)
         {
             filasSeleccionada = e.RowIndex;
-            txtDescripcion.Text = dgvCooredenadas.Rows[filasSeleccionada].Cells[0].Value.ToString();
-            txtLatitud.Text = dgvCooredenadas.Rows[filasSeleccionada].Cells[1].Value.ToString();
-            txtLongitud.Text = dgvCooredenadas.Rows[filasSeleccionada].Cells[2].Value.ToString();
+            txtDescripcion.Text = dgvCooredenadas.Rows[filasSeleccionada].Cells[1].Value.ToString();
+            txtLatitud.Text = dgvCooredenadas.Rows[filasSeleccionada].Cells[2].Value.ToString();
+            txtLongitud.Text = dgvCooredenadas.Rows[filasSeleccionada].Cells[3].Value.ToString();
 
             marker.Position = new PointLatLng(Convert.ToDouble(txtLatitud.Text), Convert.ToDouble(txtLongitud.Text));
 
