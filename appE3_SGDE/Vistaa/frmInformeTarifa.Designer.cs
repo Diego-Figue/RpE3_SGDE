@@ -33,6 +33,7 @@
             // 
             // reportDatos
             // 
+            this.reportDatos.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.reportDatos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.reportDatos.Location = new System.Drawing.Point(0, 0);
             this.reportDatos.Name = "reportDatos";
@@ -46,7 +47,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.reportDatos);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmInformeTarifa";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmInformeTarifa";
             this.Load += new System.EventHandler(this.frmInformeTarifa_Load);
             this.ResumeLayout(false);

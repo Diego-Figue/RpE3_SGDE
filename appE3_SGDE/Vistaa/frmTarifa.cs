@@ -51,7 +51,11 @@ namespace appE3_SGDE.Vistaa
             if (filasAfectadas > 0)
             {
                 MessageBox.Show("Tarifa Registrada", "SGDE", MessageBoxButtons.OK);
-
+                txtNombre.Text = "";
+                txtDesde.Text = "";
+                txtHasta.Text = "";
+                txtValor.Text = "";
+                rtbDescripcion.Text = "";
                 mtdCargar();
 
             }

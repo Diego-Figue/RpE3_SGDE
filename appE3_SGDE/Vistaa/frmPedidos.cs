@@ -1,4 +1,6 @@
-﻿using System;
+﻿using CefSharp;
+using CefSharp.WinForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +17,79 @@ namespace appE3_SGDE.Vistaa
         public frmPedidos()
         {
             InitializeComponent();
+        }
+
+        ChromiumWebBrowser chrome;
+        private void frmPedidos_Load(object sender, EventArgs e)
+        {
+            CefSettings settings = new CefSettings();
+            //initializa
+            if (!Cef.IsInitialized)
+            {
+                Cef.Initialize(settings);
+            }
+     
+            txtDireccionUrl.Text = "https://web.whatsapp.com";
+            chrome = new ChromiumWebBrowser(txtDireccionUrl.Text);
+            this.panelNavegador.Controls.Add(chrome);
+            chrome.Dock = DockStyle.Fill;
+            chrome.AddressChanged += Chrome_AddressChange;
+
+
+        }
+        public void mtdDesactivar()
+        {
+            Cef.Shutdown();
+        }
+
+        private void Chrome_AddressChange(object sender, AddressChangedEventArgs e)
+        {
+            this.Invoke(new MethodInvoker(() =>
+            {
+                txtDireccionUrl.Text = e.Address;
+            }));
+        }
+
+        private void frmPedidos_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Cef.Shutdown();
+        }
+
+        private void btnIr_Click_1(object sender, EventArgs e)
+        {
+            chrome.Load(txtDireccionUrl.Text);
+        }
+
+        private void btnRefrescar_Click_1(object sender, EventArgs e)
+        {
+            chrome.Refresh();
+        }
+
+        private void btnAdelante_Click_1(object sender, EventArgs e)
+        {
+            if (chrome.CanGoForward)
+                chrome.Forward();
+        }
+
+        private void btnAtras_Click_1(object sender, EventArgs e)
+        {
+            if (chrome.CanGoBack)
+                chrome.Back();
+        }
+
+        private void frmPedidos_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Cef.Shutdown();
+        }
+
+        private void frmPedidos_FormClosing_1(object sender, FormClosingEventArgs e)
+        {
+            Cef.Shutdown();
+        }
+
+        private void frmPedidos_Deactivate(object sender, EventArgs e)
+        {
+            Cef.Shutdown();
         }
     }
 }

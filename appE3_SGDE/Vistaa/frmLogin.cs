@@ -90,5 +90,12 @@ namespace appE3_SGDE.Vistaa
         {
             this.WindowState = FormWindowState.Minimized;
         }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide();
+            frmRecuperarContraseña objRecuperarContreña = new frmRecuperarContraseña();
+            objRecuperarContreña.Show();
+        }
     }
 }

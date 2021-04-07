@@ -35,6 +35,7 @@ namespace appE3_SGDE.Vistaa
             this.label3 = new System.Windows.Forms.Label();
             this.btnIniciar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
             this.lineShape2 = new Microsoft.VisualBasic.PowerPacks.LineShape();
@@ -42,7 +43,6 @@ namespace appE3_SGDE.Vistaa
             this.btnCerrar = new System.Windows.Forms.PictureBox();
             this.btnMinimizar = new System.Windows.Forms.PictureBox();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
@@ -92,6 +92,7 @@ namespace appE3_SGDE.Vistaa
             // btnIniciar
             // 
             this.btnIniciar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.btnIniciar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnIniciar.FlatAppearance.BorderSize = 0;
             this.btnIniciar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
             this.btnIniciar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -116,6 +117,18 @@ namespace appE3_SGDE.Vistaa
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(250, 330);
             this.panel1.TabIndex = 7;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label1.Location = new System.Drawing.Point(74, 227);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(102, 39);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "SGDE";
             // 
             // pictureBox3
             // 
@@ -194,18 +207,7 @@ namespace appE3_SGDE.Vistaa
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "¿Ha olvidado su contraseña?";
             this.linkLabel1.VisitedLinkColor = System.Drawing.Color.DimGray;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label1.Location = new System.Drawing.Point(74, 227);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(102, 39);
-            this.label1.TabIndex = 11;
-            this.label1.Text = "SGDE";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // frmLogin
             // 
