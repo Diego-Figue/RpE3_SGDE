@@ -40,16 +40,10 @@ namespace appE3_SGDE.Vistaa
         private void frmMapa_Load(object sender, EventArgs e)
         {
             mtdCargarGrind();
-            //dt = new DataTable();
-            //dt.Columns.Add(new DataColumn("Descripción", typeof(string)));
-            //dt.Columns.Add(new DataColumn("Lat", typeof(double)));
-            //dt.Columns.Add(new DataColumn("Long", typeof(double)));
 
-            //dt.Rows.Add("Sogamoso", LatInicial, LngInicial);
-            //dgvCooredenadas.DataSource = dt;
-
-            //dgvCooredenadas.Columns[1].Visible = false;
-            //dgvCooredenadas.Columns[2].Visible = false;
+            this.dgvCooredenadas.Columns["idMapa"].Visible = false;
+            this.dgvCooredenadas.Columns["latitud"].Visible = false;
+            this.dgvCooredenadas.Columns["longitud"].Visible = false;
 
             gMapControl1.DragButton = MouseButtons.Left;
             gMapControl1.CanDragMap = true;
@@ -124,28 +118,33 @@ namespace appE3_SGDE.Vistaa
             }
 
         }
-        clMapa objMapa;
-        int idMapaBorar = 0;
+        clMapa objMapa = new clMapa();
+        int idMap = 0;
+      
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            objMapa = new clMapa();
-            objMapa.idMapa = idMapaBorar;
 
-            if (objMapa.mtdEliminar() > 0)
+            DialogResult opccion = MessageBox.Show("Desea eliminar este lugar? " + txtDescripcion.Text , "Eliminar Lugar",MessageBoxButtons.YesNo);
+            if (opccion== DialogResult.Yes)
             {
-                MessageBox.Show("Descripcción Eliminada");
-                //mtdCargar();
-
+                int filasAfectadas = objMapa.mtdEliminar(idMap);
+                if (filasAfectadas > 0)
+                {
+                    MessageBox.Show("Lugar Eliminado");
+                    mtdCargarGrind();
+                }
+                else
+                {
+                    MessageBox.Show("Error, no se pudo eliminar el lugar");
+                }
             }
-            else
-            {
-                MessageBox.Show("Error, no se pudo eliminar la descripcción");
-            }
+          
         }
+       
 
-    
         private void dgvCooredenadas_CellClick_1(object sender, DataGridViewCellEventArgs e)
         {
+            idMap = int.Parse(dgvCooredenadas.Rows[e.RowIndex].Cells["idMapa"].FormattedValue.ToString());
             filasSeleccionada = e.RowIndex;
             txtDescripcion.Text = dgvCooredenadas.Rows[filasSeleccionada].Cells[1].Value.ToString();
             txtLatitud.Text = dgvCooredenadas.Rows[filasSeleccionada].Cells[2].Value.ToString();

@@ -50,10 +50,10 @@ namespace appE3_SGDE.Datoss
             return Datos;
         }
     
-        public int mtdEliminar()
+        public int mtdEliminar(int idMap)
         {
 
-            string consulta = "delete from mapa where idMapa = " + idMapa;
+            string consulta = "delete from mapa where idMapa " + idMap;
             clConexion objConexion = new clConexion();
             int eliminar = objConexion.mtdConectado(consulta);
             return eliminar;
