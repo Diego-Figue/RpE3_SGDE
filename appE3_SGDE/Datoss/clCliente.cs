@@ -48,7 +48,7 @@ namespace appE3_SGDE.Datoss
 
         public int mtdRegistrar()
         {
-            string consultaInsert = "insert into cliente(nombre,apellido,direccion,telefono,email,nombreEmpresa)values" +
+            string consultaInsert = "insert into cliente(nombres,apellidos,direccion,telefono,email,nombreEmpresa)values" +
                 "('" + nombres + "','" + apellidos + "','" + direccion + "','" + telefono + "','" + email + "','" + nombreEmpresa + "')";
             clConexion objConexion = new clConexion();
             int registrosAfectados = objConexion.mtdConectado(consultaInsert);
