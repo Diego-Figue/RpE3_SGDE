@@ -146,11 +146,11 @@ namespace appE3_SGDE.Vistaa
         string extension = "";
         private void btnCargarIma_Click(object sender, EventArgs e)
         {
-            openFileProducto.Filter = "Image Files(JPG,PNG,GIF)|*.JPG;*.PNG;*.GIF";
+            openFileProductos.Filter = "Image Files(JPG,PNG,GIF)|*.JPG;*.PNG;*.GIF";
 
-            if (openFileProducto.ShowDialog() == DialogResult.OK)
+            if (openFileProductos.ShowDialog() == DialogResult.OK)
             {
-                string url = openFileProducto.FileName;
+                string url = openFileProductos.FileName;
                 pbImagen.Load(url);
                 extension = Path.GetExtension(url);
             }
