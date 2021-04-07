@@ -121,6 +121,7 @@ namespace appE3_SGDE.Vistaa
             // btnMinimizar
             // 
             this.btnMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMinimizar.Image = ((System.Drawing.Image)(resources.GetObject("btnMinimizar.Image")));
             this.btnMinimizar.Location = new System.Drawing.Point(1285, 3);
             this.btnMinimizar.Name = "btnMinimizar";
@@ -133,6 +134,7 @@ namespace appE3_SGDE.Vistaa
             // btnCerrar
             // 
             this.btnCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrar.Image")));
             this.btnCerrar.Location = new System.Drawing.Point(1333, 4);
             this.btnCerrar.Name = "btnCerrar";
@@ -259,6 +261,7 @@ namespace appE3_SGDE.Vistaa
             this.btnSocios.TabIndex = 8;
             this.btnSocios.Text = "Socios";
             this.btnSocios.UseVisualStyleBackColor = true;
+            this.btnSocios.Click += new System.EventHandler(this.btnSocios_Click);
             // 
             // panel3
             // 

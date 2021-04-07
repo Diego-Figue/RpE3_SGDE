@@ -53,7 +53,7 @@ namespace appE3_SGDE.Vistaa
 
                 string ruta = Directory.GetCurrentDirectory() + "\\imagenes\\";
 
-                File.Copy(openFileProducto.FileName, ruta + nombreImagen);
+                File.Copy(openFileProductos.FileName, ruta + nombreImagen);
 
             }
             else

@@ -160,5 +160,10 @@ namespace appE3_SGDE.Vistaa
 
             }
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

@@ -33,7 +33,13 @@ namespace appE3_SGDE.Vistaa
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            DialogResult opccion = MessageBox.Show("Desea Cerra La Aplicacion", "Cerrar", MessageBoxButtons.YesNo);
+            if (opccion == DialogResult.Yes)
+            {
+
+                Application.Exit();
+
+            }
         }
 
         private void btnMinimizar_Click(object sender, EventArgs e)
@@ -43,7 +49,7 @@ namespace appE3_SGDE.Vistaa
 
         public void mtdAbrirFormHijo(object formhijo)
         {
-            if (this.PanelContenedor.Controls.Count>0)
+            if (this.PanelContenedor.Controls.Count > 0)
                 this.PanelContenedor.Controls.RemoveAt(0);
             Form fh = formhijo as Form;
             fh.TopLevel = false;
@@ -83,13 +89,18 @@ namespace appE3_SGDE.Vistaa
 
         private void btnCostos_Click(object sender, EventArgs e)
         {
-           
+
             mtdAbrirFormHijo(new frmTarifa());
         }
 
         private void btnpedidos_Click(object sender, EventArgs e)
         {
             mtdAbrirFormHijo(new frmPedidos());
+        }
+
+        private void btnSocios_Click(object sender, EventArgs e)
+        {
+            mtdAbrirFormHijo(new frmSocio());
         }
     }
 }
